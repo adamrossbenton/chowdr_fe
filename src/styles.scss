@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+// --------------------------
+// VARIABLES
+// --------------------------
+$maincolor: black;
+$contrastcolor: white;
+
+@mixin white-text-black-bg {
+  color: $contrastcolor;
+  background-color: $maincolor;
+}
+
+@mixin black-test-white-bg {
+  color: $maincolor;
+  background-color: $contrastcolor;
+}
+
+@mixin formbookcolors {
+  background-color: #47596f;
+  color: #D7C8B4;
+}
+
+
+// --------------------------
+// Header
+// --------------------------
+body {
+    background-color: #9b775d;
+    font-family: 'Raleway';
+    text-decoration: none;
+}
+nav {
+  @include white-text-black-bg;
+  display: flex;
+  justify-content: space-between;
+  background-color: #54101d;
+
+  a {
+    @include white-text-black-bg;
+    div {
+      margin: 10px;
+      font-size: large;
+    }
+    background-color: inherit;
+  }
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+    max-width: 150px;
+}
+
+  // --------------------------
+// Form
+// --------------------------
+section, div {
+  form {
+    margin: 10px 0 10px 0;
+    input {
+      @include formbookcolors;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+      border-radius: 5px;
+      &:hover{
+        border: solid #02385A;
+      }
+    
+  }
+}
+} 
+
+
+button#delete {
+  @include white-text-black-bg;
+  display: block;
+  margin: auto;
+  font-size: 1.0em;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: red;
+  &:hover{
+    border: solid darkblue 5px;
+    padding: 5px;
+    transition: 0.2s;
+  }
+}
+
+//--------------------------
+//Bookmark display
+//--------------------------
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.bName {
+  display: inline;
+}
+
+.bookmark {
+    border-radius: 20px;
+    border: solid #312229 3px;
+    width: 50%;
+    margin: 10px;
+    padding: 12px 0 12px 0;
+    background-color: #d5c5ae;
+    transition: transform 0.2s;
+    &:hover {
+     transform: scale(1.1); 
+    }
+}
+
+span {
+  font-size: larger;
+}
+
+.bookmarkList{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
