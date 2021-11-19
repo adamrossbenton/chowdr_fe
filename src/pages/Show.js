@@ -20,11 +20,14 @@ const handleSubmit = event => {
     props.history.push("/")
 }
 
+const removeChowder = () => {
+    props.deleteChowders(chowder._id)
+    props.history.push("/")
+}
+
     return (
     <div className="chowder">
-        <h1>{chowder.name}</h1>
-        <img src={chowder.image} alt={chowder.name} />
-        <h3>{chowder.description}</h3>
+     
         <form onSubmit={handleSubmit}>
         <input
             type="text"
@@ -49,6 +52,12 @@ const handleSubmit = event => {
             />
         <input type="submit" value="Update Your Chowder" />
         </form>
+
+        <h1>{chowder.name}</h1>
+        <img src={chowder.image} alt={chowder.name} />
+        <h3>{chowder.description}</h3>
+        
+        <button id="delete" onClick={removeChowder}>Delete Chowder</button>
     </div>
     )
   } 

@@ -49,7 +49,7 @@ const deleteChowders = async id => {
     getChowders();
     }
 
-    useEffect(() => getChowders(),[])
+    useEffect(() => getChowders(),[]);
 
     return (
         <main>
@@ -59,7 +59,7 @@ const deleteChowders = async id => {
                 </Route>
                 <Route 
                 path="/chowders/:id"
-                render={rp => (
+                render={(rp) => (
                     <Show
                     chowders={chowders}
                     updateChowders={updateChowders}
