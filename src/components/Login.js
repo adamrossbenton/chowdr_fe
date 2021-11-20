@@ -7,7 +7,7 @@ const Login = ({setToken}) => {
     // const [password, setPassword] = useState()
     const [newForm, setNewForm] = useState()
 
-    const userUrl = "http://localhost:4000/user/login"
+    const userUrl = "https://chowdr-app.herokuapp.com/user/login"
 
     const loginUser = creds => {
         console.log("creds: ", creds)
