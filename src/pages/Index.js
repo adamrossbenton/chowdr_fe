@@ -45,9 +45,9 @@ console.log(info)
     const loaded = () => {
         return info.map((chowder) => (
             <div key={chowder._id} className="chowder">
-                <img src={chowder.image} alt={chowder.name} />
+                <Link to={`/chowders/${chowder._id}`}><img src={chowder.image} alt={chowder.name} /></Link>
                 <Link to={`/chowders/${chowder._id}`}><h3>{chowder.name}</h3></Link>
-                <p>{chowder.description}</p>
+                <Link to={`/chowders/${chowder._id}`}><p>{chowder.description}</p></Link>
             </div>
         ))
     };
