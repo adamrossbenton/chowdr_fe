@@ -1,23 +1,15 @@
 import './App.css';
-import {useState} from "react"
 import {Route, Switch} from "react-router-dom"
 
 import Header from './components/Header';
 import Main from './components/Main';
 import Login from "./components/Login"
 
+import useToken from "./hooks/useToken"
+
 function App() {
-  const setToken = userToken => {
-    sessionStorage.setItem("token", JSON.stringify(userToken))
-  }
 
-  const getToken= () => {
-    const tokenString = sessionStorage.getItem("token")
-    const userToken = JSON.parse(tokenString)
-    return userToken?.token
-  }
-
-  const token = getToken()
+  const {token, setToken} = useToken()
 
   if (!token) {
     return <div className="App">
