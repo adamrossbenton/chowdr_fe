@@ -2,6 +2,7 @@ import React from "react"
 
 const Login = props => {
     return <>
+        <h1>Enter username and password to log in</h1>
         <form>
             <label>
                 <p>Username: </p>
