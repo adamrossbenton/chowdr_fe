@@ -33,7 +33,6 @@ const inputRef = useRef(null);
 useEffect(() => setInfo(chowders), [props.chowders]);
 
 const handleClick = (event) => {
-    console.log("Hey")
     const newInfo = chowders.filter((v) => {
         const search = inputRef.current.value;
         return v.name.toLowerCase().includes(search.toLowerCase());
@@ -46,9 +45,9 @@ console.log(info)
     const loaded = () => {
         return info.map((chowder) => (
             <div key={chowder._id} className="chowder">
-                <Link to={`/chowders/${chowder._id}`}><h1>{chowder.name}</h1></Link>
                 <img src={chowder.image} alt={chowder.name} />
-                <h3>{chowder.description}</h3>
+                <Link to={`/chowders/${chowder._id}`}><h3>{chowder.name}</h3></Link>
+                <p>{chowder.description}</p>
             </div>
         ))
     };
@@ -58,7 +57,7 @@ console.log(info)
     };
 return (
     <section>
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
             <input
             type="text"
             value={newForm.name}
@@ -83,12 +82,12 @@ return (
             required
             />
         <input type="submit" value="Create Your Chowder" />
-        </form>
+        </form> */}
 
-        <div className="Searchbar">
+        {/* <div className="Searchbar">
             <input type="text" ref={inputRef} />
             <button onClick={handleClick}>Search</button>
-        </div>
+        </div> */}
 
         <div className="chowderList">
         {info ? loaded() : loading ()}
