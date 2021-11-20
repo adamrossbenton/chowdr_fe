@@ -33,22 +33,30 @@ const inputRef = useRef(null);
 useEffect(() => setInfo(chowders), [props.chowders]);
 
 const handleClick = (event) => {
-    console.log("Hey")
     const newInfo = chowders.filter((v) => {
         const search = inputRef.current.value;
         return v.name.toLowerCase().includes(search.toLowerCase());
     });
     setInfo(newInfo);
 }
-console.log(info)
+
+// Adding sort
+const handleSort = (event) => {
+    const newInfo = [...info];
+    newInfo.sort ((a, b) => {
+ if ( a.name > b.name) { return 1} else {return -1}
+    })
+    setInfo(newInfo)
+}
+
 
     // Loaded function
     const loaded = () => {
         return info.map((chowder) => (
             <div key={chowder._id} className="chowder">
-                <Link to={`/chowders/${chowder._id}`}><h1>{chowder.name}</h1></Link>
-                <img src={chowder.image} alt={chowder.name} />
-                <h3>{chowder.description}</h3>
+                <Link to={`/chowders/${chowder._id}`}><img src={chowder.image} alt={chowder.name} /></Link>
+                <Link to={`/chowders/${chowder._id}`}><h3>{chowder.name}</h3></Link>
+                <Link to={`/chowders/${chowder._id}`}><p>{chowder.description}</p></Link>
             </div>
         ))
     };
@@ -58,7 +66,7 @@ console.log(info)
     };
 return (
     <section>
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
             <input
             type="text"
             value={newForm.name}
@@ -83,15 +91,20 @@ return (
             required
             />
         <input type="submit" value="Create Your Chowder" />
-        </form>
+        </form> */}
+
 
         <div className="Searchbar">
+
             <input type="text" ref={inputRef} />
             <button onClick={handleClick}>Search</button>
-        </div>
+        </div> */}
+
+        <button onClick={handleSort}>Sort</button>
 
         <div className="chowderList">
-        {info ? loaded() : loading ()}
+            {info ? loaded() : loading ()}
+            <button>New Chowder</button>
         </div>
    
     </section>
