@@ -26,9 +26,9 @@ const removeChowder = () => {
 }
 
     return (
-    <div className="chowder">
+    <div className="showChowder">
      
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
         <input
             type="text"
             value={editForm.name}
@@ -51,11 +51,13 @@ const removeChowder = () => {
             onChange={handleChange}
             />
         <input type="submit" value="Update Your Chowder" />
-        </form>
+        </form> */}
 
-        <h1>{chowder.name}</h1>
         <img src={chowder.image} alt={chowder.name} />
-        <h3>{chowder.description}</h3>
+        <div className="desc">
+            <h3>{chowder.name}</h3>
+            <p>{chowder.description}</p>
+        </div>
         
         <button id="delete" onClick={removeChowder}>Delete Chowder</button>
     </div>
