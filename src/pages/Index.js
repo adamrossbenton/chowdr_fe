@@ -39,7 +39,16 @@ const handleClick = (event) => {
     });
     setInfo(newInfo);
 }
-console.log(info)
+
+// Adding sort
+const handleSort = (event) => {
+    const newInfo = [...info];
+    newInfo.sort ((a, b) => {
+ if ( a.name > b.name) { return 1} else {return -1}
+    })
+    setInfo(newInfo)
+}
+
 
     // Loaded function
     const loaded = () => {
@@ -84,10 +93,14 @@ return (
         <input type="submit" value="Create Your Chowder" />
         </form> */}
 
-        {/* <div className="Searchbar">
+
+        <div className="Searchbar">
+
             <input type="text" ref={inputRef} />
             <button onClick={handleClick}>Search</button>
         </div> */}
+
+        <button onClick={handleSort}>Sort</button>
 
         <div className="chowderList">
             {info ? loaded() : loading ()}
