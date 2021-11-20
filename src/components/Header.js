@@ -1,9 +1,13 @@
-import React from "react"
+import { Link } from "react-router-dom";
 
-const Header = props => {
-    return <>
-        <h1>hello header</h1>
-    </>
-}
-
-export default Header
+function Header(props){
+    return (
+    <nav className="nav">
+        <Link to="/">
+            <div>Chowder App</div>
+        </Link>
+    </nav>
+    );
+  } 
+  
+  export default Header
