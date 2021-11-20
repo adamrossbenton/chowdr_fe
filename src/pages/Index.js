@@ -90,7 +90,8 @@ return (
         </div> */}
 
         <div className="chowderList">
-        {info ? loaded() : loading ()}
+            {info ? loaded() : loading ()}
+            <button>New Chowder</button>
         </div>
    
     </section>

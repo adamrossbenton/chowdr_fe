@@ -59,7 +59,11 @@ const removeChowder = () => {
             <p>{chowder.description}</p>
         </div>
         
-        <button id="delete" onClick={removeChowder}>Delete Chowder</button>
+        <div className="botButtons">
+            <button id="edit">EDIT</button>
+            <button id="delete" onClick={removeChowder}>Delete Chowder</button>
+        </div>
+
     </div>
     )
   } 
