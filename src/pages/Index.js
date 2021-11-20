@@ -98,14 +98,14 @@ return (
 
             <input type="text" ref={inputRef} />
             <button onClick={handleClick}>Search</button>
-        </div> */}
+        </div>
 
         <button onClick={handleSort}>Sort</button>
 
         <div className="chowderList">
             {info ? loaded() : loading ()}
-            <button>New Chowder</button>
         </div>
+        <Link to="/new"><h1>New Chowder</h1></Link>
    
     </section>
 );
