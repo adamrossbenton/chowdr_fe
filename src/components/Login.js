@@ -6,16 +6,38 @@ const Login = ({setToken}) => {
     const [password, setPassword] = useState()
     const [newForm, setNewForm] = useState()
 
+    const userUrl = "http://localhost:4000/user/login"
+
     const handleChange = e => {
         setNewForm({
             ...newForm,
             [e.target.name]: e.target.value
         })
     }
+
+    const handleSubmit = async e => {
+        e.preventDefault()
+        const token = await loginUser({
+            username,
+            password
+        })
+        setToken(token)
+    }
     
+    const loginUser = creds => {
+        return fetch(userUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(creds)
+        })
+        .then(data => data.json())
+    }
+
     return <>
         <h1>Enter username and password to log in</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>
                 <p>Username: </p>
                 <input 
