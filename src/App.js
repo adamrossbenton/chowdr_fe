@@ -2,7 +2,7 @@ import './App.css';
 import {Route, Switch} from "react-router-dom"
 
 import Main from "./components/Main"
-import Show from "./components/Show"
+import Header from "./components/Header"
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
         <Route path="/chowders">
           <Main/>
         </Route>
-        <Route path="/chowders/:id">
-          <Show/>
+        <Route path="/header">
+          <Header/>
         </Route>
       </Switch>
     </div>
