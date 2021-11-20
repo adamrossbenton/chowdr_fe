@@ -6,7 +6,7 @@ import Show from "../pages/Show"
 function Main(props){
     const [chowders, setChowders] = useState(null);
 
-    const URL = "https://chowdr-app.herokuapp.com/chowders";
+    const URL = "https://chowdr-app.herokuapp.com/chowders/";
 
     const getChowders = async () => {
         const response = await fetch(URL);
