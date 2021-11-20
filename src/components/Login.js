@@ -1,29 +1,16 @@
 import React, {useState} from "react"
 import PropTypes from "prop-types"
+// import useToken from "../hooks/useToken"
 
 const Login = ({setToken}) => {
-    const [username, setUsername] = useState()
-    const [password, setPassword] = useState()
+    // const [username, setUsername] = useState()
+    // const [password, setPassword] = useState()
     const [newForm, setNewForm] = useState()
 
     const userUrl = "http://localhost:4000/user/login"
 
-    const handleChange = e => {
-        setNewForm({
-            ...newForm,
-            [e.target.name]: e.target.value
-        })
-    }
-
-    const handleSubmit = async () => {
-        const token = await loginUser({
-            username,
-            password
-        })
-        setToken(token)
-    }
-    
     const loginUser = creds => {
+        console.log("creds: ", creds)
         return fetch(userUrl, {
             method: "POST",
             headers: {
@@ -34,13 +21,32 @@ const Login = ({setToken}) => {
         .then(data => data.json())
     }
 
+    const handleChange = e => {
+        setNewForm({
+            ...newForm,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSubmit = async e => {
+        e.preventDefault()
+        const {username} = newForm
+        const {password} = newForm
+        const token = await loginUser({
+            username,
+            password
+        })
+        setToken(token)
+    }
+    
     return <>
         <h1>Enter username and password to log in</h1>
         <form onSubmit={handleSubmit}>
             <label>
                 <p>Username: </p>
                 <input 
-                    type="text" 
+                    type="text"
+                    name="username" 
                     placeholder="Username" 
                     onChange={handleChange}
                     />
@@ -48,7 +54,8 @@ const Login = ({setToken}) => {
             <label>
                 <p>Password: </p>
                 <input 
-                    type="password" 
+                    type="password"
+                    name="password" 
                     placeholder="Password"
                     onChange={handleChange}
                     />
