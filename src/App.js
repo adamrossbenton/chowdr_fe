@@ -12,7 +12,7 @@ function App() {
   if (!token) {
     return <div className="App">
       <Header />
-      <Login />
+      <Login setToken={setToken} />
     </div>
   }
 
