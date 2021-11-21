@@ -12,6 +12,9 @@ function Header(props){
                 <Link to="/">
                     <div>chowdr</div>
                 </Link>
+                <Link to="/login">
+                    <button>login</button>
+                </Link>
             </nav>
 
             <nav className="subNav">

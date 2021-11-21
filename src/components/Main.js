@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show"
+import Login from "./Login"
 
 function Main(props){
     const [chowders, setChowders] = useState(null);
@@ -67,7 +68,10 @@ const deleteChowders = async id => {
                     {...rp}
                     />
                     )}
-                    />
+                />
+                <Route>
+                    <Login setToken={props.setToken}/>
+                </Route>
             </Switch>
         </main>
     );

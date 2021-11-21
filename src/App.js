@@ -11,17 +11,17 @@ function App() {
 
   const {token, setToken} = useToken()
 
-  if (!token) {
-    return <div className="App">
-      <Header />
-      <Login setToken={setToken} />
-    </div>
-  }
+  // if (!token) {
+  //   return <div className="App">
+  //     <Header />
+  //     <Login setToken={setToken} />
+  //   </div>
+  // }
 
   return (
     <div className="App">
       <Header token={token}/>
-      <Main />
+      <Main token={token} setToken={setToken}/>
     </div>
   );
 }

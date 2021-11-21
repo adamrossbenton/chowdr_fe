@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import {useHistory} from "react-router-dom"
 import PropTypes from "prop-types"
 // import useToken from "../hooks/useToken"
 
@@ -6,6 +7,8 @@ const Login = ({setToken}) => {
     // const [username, setUsername] = useState()
     // const [password, setPassword] = useState()
     const [newForm, setNewForm] = useState()
+
+    const history = useHistory()
 
     const userUrl = "https://chowdr-app.herokuapp.com/user/login"
     // const userUrl = "https://chowdr-app.herokuapp.com/user/login"
@@ -38,6 +41,7 @@ const Login = ({setToken}) => {
             password
         })
         setToken(token)
+        history.push("/")
     }
     
     return <>
