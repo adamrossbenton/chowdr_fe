@@ -1,28 +1,64 @@
 import { Link } from "react-router-dom";
 
 function Header(props){
-    return (<>
-    <nav className="nav">
-        <Link to="/">
-            <div>chowdr</div>
-        </Link>
-    </nav>
+    
+    const logout = () => {
+        localStorage.clear()
+    }
 
-    <nav className="subNav">
-        <Link to="/">
-            <div>Home</div>
-        </Link>
+    const guestDisplay = () => {
+        return <>
+            <nav className="nav">
+                <Link to="/">
+                    <div>chowdr</div>
+                </Link>
+            </nav>
 
-        <Link to="/">
-            <div>Recommendations</div>
-        </Link>
+            <nav className="subNav">
+                <Link to="/">
+                    <div>Home</div>
+                </Link>
 
-        <Link to="/">
-            <div>About</div>
-        </Link>
-    </nav>
-    </>
-    );
+                <Link to="/">
+                    <div>Recommendations</div>
+                </Link>
+
+                <Link to="/">
+                    <div>About</div>
+                </Link>
+            </nav>
+        </>
+    }
+
+    const userDisplay = () => {
+        return <>
+            <nav className="nav">
+                <Link to="/">
+                    <div>chowdr</div>
+                </Link>
+                <form onSubmit={logout}>
+                    <button>Logout</button>
+                </form>
+            </nav>
+
+            <nav className="subNav">
+                <Link to="/">
+                    <div>Home</div>
+                </Link>
+
+                <Link to="/">
+                    <div>Recommendations</div>
+                </Link>
+
+                <Link to="/">
+                    <div>About</div>
+                </Link>
+            </nav>
+        </>
+    }
+
+    return props.token ?
+        userDisplay() : guestDisplay()
   } 
   
   export default Header
