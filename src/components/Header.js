@@ -2,15 +2,20 @@ import { Link } from "react-router-dom";
 
 function Header(props){
     
+    // logs out user, clears user's localstorage
     const logout = () => {
         localStorage.clear()
     }
 
+    // If user is not logged in
     const guestDisplay = () => {
         return <>
             <nav className="nav">
                 <Link to="/">
                     <div>chowdr</div>
+                </Link>
+                <Link to="/login">
+                    <button>login</button>
                 </Link>
             </nav>
 
@@ -30,6 +35,7 @@ function Header(props){
         </>
     }
 
+    // if user is logged in
     const userDisplay = () => {
         return <>
             <nav className="nav">
@@ -57,6 +63,7 @@ function Header(props){
         </>
     }
 
+    // check for login token and render page as appropriate
     return props.token ?
         userDisplay() : guestDisplay()
   } 

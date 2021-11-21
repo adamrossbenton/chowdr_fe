@@ -1,14 +1,17 @@
 import React, {useState} from "react"
+import {useHistory} from "react-router-dom"
 import PropTypes from "prop-types"
 // import useToken from "../hooks/useToken"
 
 const Login = ({setToken}) => {
-    // const [username, setUsername] = useState()
-    // const [password, setPassword] = useState()
     const [newForm, setNewForm] = useState()
 
+    // used to redirect to "/" after form submission
+    const history = useHistory()
+
     const userUrl = "https://chowdr-app.herokuapp.com/user/login"
-    // const userUrl = "https://chowdr-app.herokuapp.com/user/login"
+    // TODO: Maybe swap the link above with the link below. It works for now, but might want to do this
+    // const userUrl = "https://chowdr-app.herokuapp.com/user"
 
     const loginUser = creds => {
         console.log("creds: ", creds)
@@ -38,6 +41,7 @@ const Login = ({setToken}) => {
             password
         })
         setToken(token)
+        history.push("/")
     }
     
     return <>
