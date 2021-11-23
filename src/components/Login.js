@@ -24,12 +24,6 @@ const Login = ({setToken}) => {
         .then(data => data.json())
     }
 
-    const signupUser = creds => {
-        return fetch(userUrl, {
-
-        })
-    }
-
     const handleChange = e => {
         setNewForm({
             ...newForm,
