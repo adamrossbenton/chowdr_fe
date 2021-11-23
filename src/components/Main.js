@@ -57,7 +57,7 @@ const deleteChowders = async id => {
         <main>
             <Switch>
                 <Route exact path="/">
-                    <Index chowders={chowders} createChowders={createChowders} />
+                    <Index chowders={chowders} createChowders={createChowders} token={props.token} />
                 </Route>
                 <Route 
                 path="/chowders/:id"
