@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show"
 import Login from "./Login"
+import Signup from "./Signup"
 
 function Main(props){
     const [chowders, setChowders] = useState(null);
@@ -56,7 +57,7 @@ const deleteChowders = async id => {
         <main>
             <Switch>
                 <Route exact path="/">
-                    <Index chowders={chowders} createChowders={createChowders} />
+                    <Index chowders={chowders} createChowders={createChowders} token={props.token} />
                 </Route>
                 <Route 
                 path="/chowders/:id"
@@ -69,8 +70,11 @@ const deleteChowders = async id => {
                     />
                     )}
                 />
-                <Route>
+                <Route path="/login">
                     <Login setToken={props.setToken}/>
+                </Route>
+                <Route path="/signup">
+                    <Signup />
                 </Route>
             </Switch>
         </main>

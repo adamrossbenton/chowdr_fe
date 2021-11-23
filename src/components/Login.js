@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {useHistory} from "react-router-dom"
+import {useHistory, Link} from "react-router-dom"
 import PropTypes from "prop-types"
 // import useToken from "../hooks/useToken"
 
@@ -14,7 +14,6 @@ const Login = ({setToken}) => {
     // const userUrl = "https://chowdr-app.herokuapp.com/user"
 
     const loginUser = creds => {
-        console.log("creds: ", creds)
         return fetch(userUrl, {
             method: "POST",
             headers: {
@@ -23,6 +22,12 @@ const Login = ({setToken}) => {
             body: JSON.stringify(creds)
         })
         .then(data => data.json())
+    }
+
+    const signupUser = creds => {
+        return fetch(userUrl, {
+
+        })
     }
 
     const handleChange = e => {
@@ -67,6 +72,8 @@ const Login = ({setToken}) => {
             </label>
             <button type="submit">Login</button>
         </form>
+        <Link to="/signup"><button>Signup</button></Link>
+        <Link to="/"><button>Cancel</button></Link>
     </>
 }
 
