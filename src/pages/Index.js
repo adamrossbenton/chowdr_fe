@@ -66,7 +66,7 @@ const handleSort = (event) => {
     };
 return (
     <section>
-        {/* <form onSubmit={handleSubmit}>
+         <form onSubmit={handleSubmit}>
             <input
             type="text"
             value={newForm.name}
@@ -91,14 +91,14 @@ return (
             required
             />
         <input type="submit" value="Create Your Chowder" />
-        </form> */}
+        </form> 
 
 
         <div className="Searchbar">
 
             <input type="text" ref={inputRef} />
             <button onClick={handleClick}>Search</button>
-        </div> */}
+        </div> 
 
         <button onClick={handleSort}>Sort</button>
 
