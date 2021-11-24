@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 
 const Login = ({setToken}) => {
     const [newForm, setNewForm] = useState()
+    const [attempts, setAttempts] = useState(0)
 
     // used to redirect to "/" after form submission
     const history = useHistory()
@@ -31,14 +32,26 @@ const Login = ({setToken}) => {
 
     const handleSubmit = async e => {
         e.preventDefault()
-        const {username} = newForm
-        const {password} = newForm
-        const token = await loginUser({
-            username,
-            password
-        })
-        setToken(token)
-        history.push("/")
+        if (newForm) {
+            const {username} = newForm
+            const {password} = newForm
+            const token = await loginUser({
+                username,
+                password
+            })
+            setToken(token)
+            if (token) {
+                history.push("/")
+            } else {
+                setAttempts(attempts + 1)
+            }    
+        }
+    }
+
+    const noUser = () => {
+        if (attempts > 0) {
+            return <p>Incorrect username and/or password, please try again</p>
+        }
     }
     
     return <>
@@ -64,6 +77,7 @@ const Login = ({setToken}) => {
             </label>
             <button type="submit">Login</button>
         </form>
+        {noUser}
         <Link to="/user/signup"><button>Signup</button></Link>
         <Link to="/"><button>Cancel</button></Link>
     </>
