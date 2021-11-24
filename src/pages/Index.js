@@ -51,7 +51,17 @@ const handleSort = (event) => {
 
 
     // Loaded function
-    const loaded = () => {
+    const loadedLogin = () => {
+        return info.map((chowder) => (
+            <div key={chowder._id} className="chowder">
+                <Link to={`/chowders/${chowder._id}`}><img src={chowder.image} alt={chowder.name} /></Link>
+                <Link to={`/chowders/${chowder._id}`}><h3>{chowder.name}</h3></Link>
+                <Link to={`/chowders/${chowder._id}`}><p>{chowder.description}</p></Link>
+            </div>
+        ))
+    };
+
+    const loadedGuest = () => {
         return info.map((chowder) => (
             <div key={chowder._id} className="chowder">
                 <Link to={`/chowders/${chowder._id}`}><img src={chowder.image} alt={chowder.name} /></Link>
@@ -103,7 +113,13 @@ return (
         <button onClick={handleSort}>Sort</button>
 
         <div className="chowderList">
+<<<<<<< HEAD
             {info ? loaded() : loading ()}
+=======
+            {info ? loadedLogin() : loading ()}
+            {props.token ?
+                <button>New Chowder</button> : <Link to="/login"><button>Login to add new chowders!</button></Link>}
+>>>>>>> dev
         </div>
         <Link to="/new"><h1>New Chowder</h1></Link>
    
