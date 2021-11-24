@@ -10,8 +10,7 @@ const Login = ({setToken}) => {
     const history = useHistory()
 
     // const userUrl = "https://chowdr-app.herokuapp.com/user/login"
-    // TODO: Maybe swap the link above with the link below. It works for now, but might want to do this
-    const userUrl = "https://chowdr-app.herokuapp.com/user/login"
+    const userUrl = "http://localhost:4000/user/login"
 
     const loginUser = creds => {
         return fetch(userUrl, {
@@ -66,7 +65,7 @@ const Login = ({setToken}) => {
             </label>
             <button type="submit">Login</button>
         </form>
-        <Link to="/signup"><button>Signup</button></Link>
+        <Link to="/user/signup"><button>Signup</button></Link>
         <Link to="/"><button>Cancel</button></Link>
     </>
 }

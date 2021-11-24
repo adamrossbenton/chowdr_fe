@@ -25,7 +25,7 @@ const Signup = props => {
             username: "",
             password: "",
         })
-        history.push("/login")
+        history.push("/user/login")
     }
 
     const handleChange = e => {

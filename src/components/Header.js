@@ -14,7 +14,7 @@ function Header(props){
                 <Link to="/">
                     <div>chowdr</div>
                 </Link>
-                <Link to="/login">
+                <Link to="/user/login">
                     <button>login</button>
                 </Link>
             </nav>

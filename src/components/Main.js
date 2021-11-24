@@ -70,10 +70,10 @@ const deleteChowders = async id => {
                     />
                     )}
                 />
-                <Route path="/login">
+                <Route path="/user/login">
                     <Login setToken={props.setToken}/>
                 </Route>
-                <Route path="/signup">
+                <Route path="/user/signup">
                     <Signup />
                 </Route>
             </Switch>
