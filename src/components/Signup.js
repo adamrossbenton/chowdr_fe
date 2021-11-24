@@ -5,8 +5,7 @@ const Signup = props => {
     const [newForm, setNewForm] = useState()
 
     const history = useHistory()
-    // const userUrl = "https://chowdr-app.herokuapp.com/user/signup"
-    const userUrl = "http://localhost:4000/user/signup"
+    const userUrl = "https://chowdr-app.herokuapp.com/user/signup"
 
     const createUser = async creds => {
         await fetch(userUrl, {
