@@ -1,10 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Header from './components/Header';
+import Main from './components/Main';
+
+import useToken from "./hooks/useToken"
+
 function App() {
+
+  const {token, setToken} = useToken()
+
   return (
     <div className="App">
-      <h1>hello chowdr</h1>
+      <Header token={token}/>
+      <Main token={token} setToken={setToken}/>
     </div>
   );
 }

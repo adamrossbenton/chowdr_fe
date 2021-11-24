@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
+body {
+  background-color: white;
+  // background-image: url(https://besthqwallpapers.com/Uploads/17-9-2019/104580/vertical-wooden-boards-4k-brown-wooden-texture-wooden-backgrounds-wooden-textures.jpg);
+  background-image: url(https://media-exp1.licdn.com/dms/image/C561BAQHpBrqwtM_Ixw/company-background_10000/0/1627085173284?e=1637521200&v=beta&t=Cyo-4gUJF6kWyrM3F35OX6wxo4dJ1wvPyo44qwWmwWs);
+  background-size: 105vw;
+  background-position:top;
+  background-attachment: fixed;
+  font-family: 'Raleway';
+  text-decoration: none;
+}
+
+// --------------------------
+// VARIABLES
+// --------------------------
+
+@mixin formbookcolors {
+  background-color: #47596f;
+  color: #D7C8B4;
+}
+
+// --------------------------
+// Header
+// --------------------------
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #1b1b19;
+  height: 7vh;
+  margin: -8px;
+
+  a {
+    display: flex;
+    align-items: center;
+    div {
+      color: #f7f7f7;
+      font-family: 'Comfortaa';
+      font-size: 2vw;
+    }
+  }
+}
+
+.subNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #1b1b19;
+  height: 4vh;
+  border-top: 2px solid rgb(92, 86, 86);
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0.2em 0;
+
+
+    div {
+      display: block;
+      position: relative;
+      padding: 0.2em 0;
+
+      color: #f7f7f7;
+      font-size: 1vw;
+      line-height: 2rem;
+      padding: 0 0.5rem;
+      font-family: 'Raleway';
+    }
+
+    div::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: rgb(255, 187, 0);
+      opacity: 0;
+      transition: opacity 300ms, transform 300ms;
+
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    div:hover::after, div:focus::after {
+      opacity: 1;
+      transform: translate3d(0, 0.2em, 0);
+      transform: scale(1)
+}
+
+  }
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+// --------------------------
+// Form
+// --------------------------
+section, div {
+  form {
+    margin: 10px 0 10px 0;
+    input {
+      @include formbookcolors;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+      border-radius: 5px;
+      &:hover{
+        border: solid #02385A;
+      }
+    
+  }
+}
+} 
+
+
+button#delete {
+  display: block;
+  margin: auto;
+  font-size: 1.0em;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: red;
+  &:hover{
+    border: solid darkblue 5px;
+    padding: 5px;
+    transition: 0.2s;
+  }
+}
+
+//--------------------------
+// Chowder Index
+//--------------------------
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.chowder {
+  border-radius: 20px;
+  width: 20%;
+  margin: 10px;
+  padding: 12px 0 12px 0;
+  background-color: rgba(0, 0, 0, 0.550);
+
+  font-size: 10px;
+  color: white;
+
+  transition: color 0.3s;
+  display: inline-block;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+
+  h3 {
+    font-size: 1vw;
+  }
+
+  p {
+    font-size: 0.8vw;
+    margin: 0px 15px 10px 15px;
+  }
+
+  img {
+    max-width: 300px;
+    border-radius: 10px;
+  }
+
+}
+///// ANIMATION /////
+
+.chowder:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgb(255, 187, 0);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease-out;
+}
+.chowder:hover {
+  color: black;
+}
+
+.chowder:hover:before {
+  transform: scaleX(1)
+}
+
+///////////////////////
+
+span {
+  font-size: larger;
+}
+
+.chowderList{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+//--------------------------
+// Show Chowder Page
+//--------------------------
+
+.showChowder {
+  display: flex;
+  justify-content: center;
+
+  border-radius: 10px;
+  width: 80%;
+  margin: 30px;
+  padding: 20vh 5vw 20vh 5vw;
+  background-color: rgba(0, 0, 0, 0.550);
+
+  font-size: 10px;
+  color: white;
+
+  img {
+    max-width: 40vw;
+    max-height: 50vw;
+    border-radius: 30px;
+    transition: transform 0.3s;
+    &:hover {
+     transform: scale(1.2); 
+    }
+  }
+
+}
+
+.desc {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0vw 5vw 0vw 5vw;
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 1vw;
+  }
+
+}
+
+/// SHOW PAGE BUTTONS
+.botButtons {
+  display: block;
+}
