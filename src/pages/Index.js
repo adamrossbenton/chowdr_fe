@@ -115,7 +115,9 @@ return (
         <div className="chowderList">
             {info ? loadedLogin() : loading ()}
             {props.token ?
-                <button>New Chowder</button> : <Link to="/login"><button>Login to add new chowders!</button></Link>}
+                <button>New Chowder</button> :
+                <Link to="/login"><button>Login to add new chowders!</button></Link>
+            }
         </div>
    
     </section>
