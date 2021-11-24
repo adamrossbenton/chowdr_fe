@@ -113,15 +113,10 @@ return (
         <button onClick={handleSort}>Sort</button>
 
         <div className="chowderList">
-<<<<<<< HEAD
-            {info ? loaded() : loading ()}
-=======
             {info ? loadedLogin() : loading ()}
             {props.token ?
                 <button>New Chowder</button> : <Link to="/login"><button>Login to add new chowders!</button></Link>}
->>>>>>> dev
         </div>
-        <Link to="/new"><h1>New Chowder</h1></Link>
    
     </section>
 );

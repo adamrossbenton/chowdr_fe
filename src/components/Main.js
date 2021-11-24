@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show"
-<<<<<<< HEAD
 import New from "../pages/New"
-=======
 import Login from "./Login"
 import Signup from "./Signup"
->>>>>>> dev
+
 
 function Main(props){
     const [chowders, setChowders] = useState(null);
@@ -74,23 +72,19 @@ const deleteChowders = async id => {
                     {...rp}
                     />
                     )}
-<<<<<<< HEAD
                     />
                 
                 <Route path="/new"
                 render={(rp) => (
                     <New createChowders={createChowders} {...rp}/>
                 )}/>
-                    
-=======
-                />
+
                 <Route path="/login">
                     <Login setToken={props.setToken}/>
                 </Route>
                 <Route path="/signup">
                     <Signup />
                 </Route>
->>>>>>> dev
             </Switch>
         </main>
     );
