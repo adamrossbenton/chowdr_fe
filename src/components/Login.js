@@ -9,7 +9,7 @@ const Login = ({setToken}) => {
     // used to redirect to "/" after form submission
     const history = useHistory()
 
-    const userUrl = "https://chowdr-app.herokuapp.com/user/login"
+    const userUrl = "https://chowdr-app.herokuapp.com/user"
     // TODO: Maybe swap the link above with the link below. It works for now, but might want to do this
     // const userUrl = "https://chowdr-app.herokuapp.com/user"
 
