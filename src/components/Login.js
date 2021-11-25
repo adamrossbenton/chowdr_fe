@@ -1,7 +1,6 @@
 import React, {useState} from "react"
 import {useHistory, Link} from "react-router-dom"
 import PropTypes from "prop-types"
-// import useToken from "../hooks/useToken"
 
 const Login = ({setToken}) => {
     const [newForm, setNewForm] = useState()
@@ -52,6 +51,16 @@ const Login = ({setToken}) => {
             return <p>Incorrect username and/or password, please try again</p>
         }
     }
+
+    // TODO: Upon successful login, "password incorrect" briefly renders prior to redirect. Maybe set timer or some sort of promise to fix?
+    // const waitNoUser = () => {
+    //     if (attempts > 0) {
+    //         console.log("testing...")
+    //         setTimeout(() => {
+    //             noUser()
+    //         }, 1000)    
+    //     }
+    // }
     
     return <>
         <h1>Enter username and password to log in</h1>
