@@ -31,6 +31,7 @@ const Login = ({setToken}) => {
     }
 
     const handleSubmit = async e => {
+        setAttempts(attempts + 1)    
         e.preventDefault()
         if (newForm) {
             const {username} = newForm
@@ -42,9 +43,7 @@ const Login = ({setToken}) => {
             setToken(token)
             if (token) {
                 history.push("/")
-            } else {
-                setAttempts(attempts + 1)
-            }    
+            }
         }
     }
 
@@ -77,7 +76,7 @@ const Login = ({setToken}) => {
             </label>
             <button type="submit">Login</button>
         </form>
-        {noUser}
+        {noUser()}
         <Link to="/user/signup"><button>Signup</button></Link>
         <Link to="/"><button>Cancel</button></Link>
     </>
