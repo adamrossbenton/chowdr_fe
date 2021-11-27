@@ -104,18 +104,27 @@ return (
         </form> */}
 
 
-        <div className="Searchbar">
+        <div className="searchbar">
 
-            <input type="text" ref={inputRef} />
-            <button onClick={handleClick}>Search</button>
+            <input type="text" ref={inputRef} className="searchterm" placeholder="Search for a soup"/>
+            <button onClick={handleClick} className="searchbutton">
+                <i class="fa fa-search"></i>
+            </button>
+
+            <button onClick={handleSort} className="searchbutton" id="sort">
+                <i class="fa fa-sort"></i>
+            </button>
+            
         </div>
-
-        <button onClick={handleSort}>Sort</button>
 
         <div className="chowderList">
             {info ? loadedLogin() : loading ()}
             {props.token ?
-                <Link to="/new"><h1>New Chowder</h1></Link> :
+                <Link to="/new">
+                    <button className="newbutton">
+                        <i class="fa fa-plus fa_custom fa-5x"></i>
+                    </button>
+                </Link> :
                 <Link to="/user/login"><button>Login to add new chowders!</button></Link>
             }
         </div>

@@ -58,11 +58,9 @@ function Header(props){
                     <div>About</div>
                 </Link>
 
-                <div>
                 <form onSubmit={logout}>
                     <button id="logout">Logout</button>
                 </form>
-                </div>
             </nav>
         </>
     }
