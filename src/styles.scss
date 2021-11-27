@@ -98,6 +98,16 @@ a:link, a:visited {
   color: inherit;
 }
 
+#logout {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  cursor: pointer;
+  font-family: inherit;
+  color: white;
+  font-size: inherit;
+}
+
 // --------------------------
 // Form
 // --------------------------
