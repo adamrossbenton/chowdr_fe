@@ -33,11 +33,6 @@ function New(props) {
 
     if (!props.token) {
         history.push("/user/login")
-        // return <>
-        //     <h1>Oops!</h1>
-        //     <p>It looks like you logged out before completing your submission.</p><br/>
-        //     <Link to="/user/login"><button>Login</button></Link>
-        // </>
     }
 
     return <div className="newChowder">
