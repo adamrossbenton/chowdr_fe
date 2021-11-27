@@ -76,7 +76,7 @@ const deleteChowders = async id => {
 
                 <Route path="/new"
                 render={(rp) => (
-                    <New createChowders={createChowders} {...rp}/>
+                    <New createChowders={createChowders} token={props.token} {...rp}/>
                 )}/>
 
                 <Route path="/user/login">

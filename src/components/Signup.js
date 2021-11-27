@@ -52,7 +52,7 @@ const Signup = props => {
                 <input type="submit" value="Sign up"/>
             </form>
         </section>
-        <Link to="/login"><button>Cancel</button></Link>
+        <Link to="/user/login"><button>Cancel</button></Link>
     </>
 }
 
