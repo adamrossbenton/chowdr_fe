@@ -101,37 +101,46 @@ a:link, a:visited {
 // --------------------------
 // Form
 // --------------------------
+
 section, div {
   form {
     margin: 10px 0 10px 0;
     input {
-      @include formbookcolors;
       padding: 10px;
       font-size: 1.1em;
-      margin: 10px;
-      border-radius: 5px;
-      &:hover{
-        border: solid #02385A;
-      }
+      margin: 2vw;
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(255, 187, 0);
+      width: 20vw;
+
+      border: none;
+      border-bottom: 2px solid rgb(255, 187, 0);
+      // &:hover{
+      //   border: solid #02385A;
+      // }
     
   }
 }
 } 
 
-
-button#delete {
-  display: block;
-  margin: auto;
-  font-size: 1.0em;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: red;
-  &:hover{
-    border: solid darkblue 5px;
-    padding: 5px;
-    transition: 0.2s;
-  }
+textarea:focus, input:focus{
+  outline: none;
 }
+
+
+// button#delete {
+//   display: block;
+//   margin: auto;
+//   font-size: 1.0em;
+//   padding: 10px;
+//   border-radius: 5px;
+//   background-color: red;
+//   &:hover{
+//     border: solid darkblue 5px;
+//     padding: 5px;
+//     transition: 0.2s;
+//   }
+// }
 
 //--------------------------
 // Chowder Index
@@ -257,4 +266,38 @@ span {
 /// SHOW PAGE BUTTONS
 .botButtons {
   display: block;
+}
+
+// --------------------------
+// New Chowder Page
+// --------------------------
+
+.newChowder {
+  display: flex;
+  padding-top: 10vh;
+}
+
+.newForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.550);
+  margin: 10px;
+  padding: 5vw 0 5vw 0;
+  width: 30vw;
+  border-radius: 5px;
+}
+
+#newCButton {
+  background-color: rgba(0, 0, 0, 0.658);
+  width: 15vw;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
+#newCButton:hover {
+  cursor: pointer;
+  transform: scale(1.15)
 }

@@ -29,12 +29,12 @@ function New(props) {
     };
 
     return <div className="newChowder">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="newForm">
                 <input
                 type="text"
                 value={newForm.name}
                 name="name"
-                placeholder="name"
+                placeholder="Name"
                 onChange={handleChange}
                 required
                 />
@@ -42,7 +42,7 @@ function New(props) {
                 type="text"
                 value={newForm.image}
                 name="image"
-                placeholder="image URL"
+                placeholder="Image URL"
                 onChange={handleChange}
                 />
                 <input
@@ -53,7 +53,7 @@ function New(props) {
                 onChange={handleChange}
                 required
                 />
-        <input type="submit" value="Create Your Chowder" />
+        <input type="submit" value="Create Your Chowder" id="newCButton"/>
         </form>
     </div>
 }
