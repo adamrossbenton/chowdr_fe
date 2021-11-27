@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 
 function New(props) {
@@ -10,6 +10,9 @@ function New(props) {
         image: "",
         description: "",
     })
+
+    // useHistory to redirect if user logs out while on page
+    const history = useHistory()
 
     // handleChange function for form
     const handleChange = (event) => {
@@ -27,6 +30,15 @@ function New(props) {
         })
         props.history.push("/")
     };
+
+    if (!props.token) {
+        history.push("/user/login")
+        // return <>
+        //     <h1>Oops!</h1>
+        //     <p>It looks like you logged out before completing your submission.</p><br/>
+        //     <Link to="/user/login"><button>Login</button></Link>
+        // </>
+    }
 
     return <div className="newChowder">
             <form onSubmit={handleSubmit} className="newForm">
