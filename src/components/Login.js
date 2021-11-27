@@ -52,6 +52,8 @@ const Login = ({setToken}) => {
         }
     }
 
+    // Testing to see if github is still broken
+
     // TODO: Upon successful login, "password incorrect" briefly renders prior to redirect. Maybe set timer or some sort of promise to fix?
     // const waitNoUser = () => {
     //     if (attempts > 0) {
