@@ -2,14 +2,16 @@ import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show"
+import New from "../pages/New"
 import Login from "./Login"
 import Signup from "./Signup"
+
 
 function Main(props){
     const [chowders, setChowders] = useState(null);
 
     const URL = "https://chowdr-app.herokuapp.com/chowders/";
-
+    
     const getChowders = async () => {
         const response = await fetch(URL);
         const data = await response.json();
@@ -59,6 +61,7 @@ const deleteChowders = async id => {
                 <Route exact path="/">
                     <Index chowders={chowders} createChowders={createChowders} token={props.token} />
                 </Route>
+
                 <Route 
                 path="/chowders/:id"
                 render={(rp) => (
@@ -70,10 +73,16 @@ const deleteChowders = async id => {
                     />
                     )}
                 />
-                <Route path="/login">
+
+                <Route path="/new"
+                render={(rp) => (
+                    <New createChowders={createChowders} {...rp}/>
+                )}/>
+
+                <Route path="/user/login">
                     <Login setToken={props.setToken}/>
                 </Route>
-                <Route path="/signup">
+                <Route path="/user/signup">
                     <Signup />
                 </Route>
             </Switch>
