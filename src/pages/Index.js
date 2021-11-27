@@ -108,15 +108,15 @@ return (
 
             <input type="text" ref={inputRef} />
             <button onClick={handleClick}>Search</button>
-        </div> */}
+        </div>
 
         <button onClick={handleSort}>Sort</button>
 
         <div className="chowderList">
             {info ? loadedLogin() : loading ()}
             {props.token ?
-                <button>New Chowder</button> :
-                <Link to="/login"><button>Login to add new chowders!</button></Link>
+                <Link to="/new"><h1>New Chowder</h1></Link> :
+                <Link to="/user/login"><button>Login to add new chowders!</button></Link>
             }
         </div>
    
