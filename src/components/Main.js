@@ -11,7 +11,7 @@ function Main(props){
     const [chowders, setChowders] = useState(null);
 
     const URL = "https://chowdr-app.herokuapp.com/chowders/";
-
+    
     const getChowders = async () => {
         const response = await fetch(URL);
         const data = await response.json();
@@ -72,17 +72,17 @@ const deleteChowders = async id => {
                     {...rp}
                     />
                     )}
-                    />
-                
+                />
+
                 <Route path="/new"
                 render={(rp) => (
                     <New createChowders={createChowders} {...rp}/>
                 )}/>
 
-                <Route path="/login">
+                <Route path="/user/login">
                     <Login setToken={props.setToken}/>
                 </Route>
-                <Route path="/signup">
+                <Route path="/user/signup">
                     <Signup />
                 </Route>
             </Switch>
