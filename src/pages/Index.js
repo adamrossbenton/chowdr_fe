@@ -125,7 +125,9 @@ return (
                         <i class="fa fa-plus fa_custom fa-5x"></i>
                     </button>
                 </Link> :
-                <Link to="/user/login"><button>Login to add new chowders!</button></Link>
+                <Link to="/user/login">
+                    <button className="newbutton"><i class="fa fa-sign-in fa_custom fa-5x"></i><span>&nbsp;&nbsp;Login to add new chowders!</span></button>
+                </Link>
             }
         </div>
    
