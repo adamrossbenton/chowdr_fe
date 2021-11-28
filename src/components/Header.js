@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Header(props){
     
-    // logs out user, clears user's localstorage
+    // logs out user by clearing user's localstorage
     const logout = () => {
         localStorage.clear()
     }
@@ -19,10 +19,6 @@ function Header(props){
             <nav className="subNav">
                 <Link to="/">
                     <div>Home</div>
-                </Link>
-
-                <Link to="/">
-                    <div>Recommendations</div>
                 </Link>
 
                 <Link to="/">
@@ -51,11 +47,11 @@ function Header(props){
                 </Link>
 
                 <Link to="/">
-                    <div>Recommendations</div>
+                    <div>About</div>
                 </Link>
 
-                <Link to="/">
-                    <div>About</div>
+                <Link to="/user">
+                    <div>My Profile</div>
                 </Link>
 
                 <form onSubmit={logout}>

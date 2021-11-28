@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show"
 import New from "../pages/New"
+import User from "../pages/User"
 import Login from "./Login"
 import Signup from "./Signup"
 
@@ -85,6 +86,9 @@ const deleteChowders = async id => {
                 </Route>
                 <Route path="/user/signup">
                     <Signup />
+                </Route>
+                <Route path="/user">
+                    <User chowders={chowders} token={props.token} />
                 </Route>
             </Switch>
         </main>
