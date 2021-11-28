@@ -12,7 +12,7 @@ function New(props) {
         image: "",
         origin: "",
         description: "",
-        creator: "",
+        creator: props.token,
     })
 
     // useHistory to redirect if user logs out while on page
@@ -32,7 +32,7 @@ function New(props) {
             image: "",
             origin: "",
             description: "",
-            creator: "",
+            creator: props.token,
         })
         props.history.push("/")
     };
@@ -75,7 +75,7 @@ function New(props) {
                 />
                 <input
                 type="text"
-                value={props.token.token}
+                value={newForm.creator}
                 name="creator"
                 placeholder="Created By:"
                 onChange={handleChange}
