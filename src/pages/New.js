@@ -4,11 +4,15 @@ import { Link, useHistory } from "react-router-dom";
 
 function New(props) {
 
+    const token = props.token
+
         // State to hold formData
     const [newForm, setNewForm] = useState({
         name: "",
         image: "",
+        origin: "",
         description: "",
+        creator: "",
     })
 
     // useHistory to redirect if user logs out while on page
@@ -22,16 +26,18 @@ function New(props) {
     // handleSubmit function for form
     const handleSubmit = (event) => {
         event.preventDefault()
-        props.createChowders(newForm)
+        props.createChowders(newForm, )
         setNewForm({
             name: "",
             image: "",
+            origin: "",
             description: "",
+            creator: "",
         })
         props.history.push("/")
     };
 
-    if (!props.token) {
+    if (!token) {
         history.push("/user/login")
     }
 
@@ -54,11 +60,26 @@ function New(props) {
                 />
                 <input
                 type="text"
+                value={newForm.origin}
+                name="origin"
+                placeholder="Country of Origin"
+                onChange={handleChange}
+                />
+                <input
+                type="text"
                 value={newForm.description}
                 name="description"
                 placeholder="Describe this tasty chowder"
                 onChange={handleChange}
                 required
+                />
+                <input
+                type="text"
+                value={props.token.token}
+                name="creator"
+                placeholder="Created By:"
+                onChange={handleChange}
+                style={{display: "none"}}
                 />
         <input type="submit" value="Create Your Chowder" id="newCButton"/>
         </form>
