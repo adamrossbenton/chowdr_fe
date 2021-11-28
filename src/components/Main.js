@@ -11,6 +11,7 @@ function Main(props){
     const [chowders, setChowders] = useState(null);
 
     const URL = "https://chowdr-app.herokuapp.com/chowders/";
+    // const URL = "http://localhost:4000/chowders"
     
     const getChowders = async () => {
         const response = await fetch(URL);
