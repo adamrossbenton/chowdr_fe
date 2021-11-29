@@ -376,3 +376,55 @@ span {
   cursor: pointer;
   transform: scale(1.15)
 }
+
+// --------------------------
+// Login/Signup Pages
+// --------------------------
+
+.loginChowder {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.795);
+  margin: 10px;
+  padding: 5vw 0 5vw 0;
+  width: 30vw;
+  border-radius: 5px;
+
+  label {
+    input {
+      color: rgb(50, 231, 255);
+      border-bottom: 2px solid rgb(50, 231, 255);
+    }
+  }
+}
+
+/// SIGNUP ///
+
+.signupChowder {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.795);
+  margin: 10px;
+  padding: 5vw 0 5vw 0;
+  width: 30vw;
+  border-radius: 5px;
+
+  input {
+    color: rgb(248, 50, 255);
+    border-bottom: 2px solid rgb(248, 50, 255);
+  }
+}
