@@ -9,6 +9,7 @@ function New(props) {
         name: "",
         image: "",
         description: "",
+        origin: "",
     })
 
     // handleChange function for form
@@ -24,6 +25,7 @@ function New(props) {
             name: "",
             image: "",
             description: "",
+            origin: "",
         })
         props.history.push("/")
     };
@@ -50,6 +52,14 @@ function New(props) {
                 value={newForm.description}
                 name="description"
                 placeholder="Describe this tasty chowder"
+                onChange={handleChange}
+                required
+                />
+                <input
+                type="text"
+                value={newForm.origin}
+                name="description"
+                placeholder="Country of Origin"
                 onChange={handleChange}
                 required
                 />

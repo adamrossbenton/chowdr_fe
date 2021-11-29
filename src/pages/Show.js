@@ -28,7 +28,7 @@ const removeChowder = () => {
     return (
     <div className="showChowder">
      
-        {/* <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
         <input
             type="text"
             value={editForm.name}
@@ -50,13 +50,21 @@ const removeChowder = () => {
             placeholder="Edit the description of this tasty chowder"
             onChange={handleChange}
             />
+             <input
+            type="text"
+            value={editForm.origin}
+            name="Country of Origin"
+            placeholder="Country of Origin"
+            onChange={handleChange}
+            />
         <input type="submit" value="Update Your Chowder" />
-        </form> */}
+        </form>
 
         <img src={chowder.image} alt={chowder.name} />
         <div className="desc">
             <h3>{chowder.name}</h3>
             <p>{chowder.description}</p>
+            <h3>{chowder.origin}</h3>
         </div>
         
         <div className="botButtons">

@@ -8,6 +8,7 @@ const [newForm, setNewForm] = useState({
     name: "",
     image: "",
     description: "",
+    origin: "",
 })
 
 // handleChange function for form
@@ -23,6 +24,7 @@ const handleSubmit = (event) => {
         name: "",
         image: "",
         description: "",
+        origin: "",
     })
 };
 
@@ -41,13 +43,43 @@ const handleClick = (event) => {
 }
 
 // Adding sort
-const handleSort = (event) => {
-    const newInfo = [...info];
-    newInfo.sort ((a, b) => {
- if ( a.name > b.name) { return 1} else {return -1}
-    })
-    setInfo(newInfo)
-}
+
+// https://dev.to/ramonak/react-how-to-dynamically-sort-an-array-of-objects-using-the-dropdown-with-react-hooks-195p
+
+
+
+// 
+    
+    
+
+
+    const handleSort = (event) => {
+        const sortArray = type => {
+        const types = {
+            name: "name",
+            origin: "origin",
+        };
+        const sortProperty = types[type];
+        const newInfo = [...info];
+            newInfo.sort ((a, b) => {
+                 if ( a.sortProperty > b.sortProperty) { return 1} else {return -1}
+                    })
+            console.log(newInfo);
+            setInfo(newInfo)
+        }
+    }
+
+
+
+// const handleSort = (event) => {
+//     const newInfo = [...info];
+//     newInfo.sort ((a, b) => {
+//  if ( a.name > b.name) { return 1} else {return -1}
+//     })
+//     setInfo(newInfo)
+// }
+
+
 
 
     // Loaded function
@@ -57,6 +89,7 @@ const handleSort = (event) => {
                 <Link to={`/chowders/${chowder._id}`}><img src={chowder.image} alt={chowder.name} /></Link>
                 <Link to={`/chowders/${chowder._id}`}><h3>{chowder.name}</h3></Link>
                 <Link to={`/chowders/${chowder._id}`}><p>{chowder.description}</p></Link>
+                <Link to={`/chowders/${chowder._id}`}><p>{chowder.origin}</p></Link>
             </div>
         ))
     };
@@ -67,6 +100,7 @@ const handleSort = (event) => {
                 <Link to={`/chowders/${chowder._id}`}><img src={chowder.image} alt={chowder.name} /></Link>
                 <Link to={`/chowders/${chowder._id}`}><h3>{chowder.name}</h3></Link>
                 <Link to={`/chowders/${chowder._id}`}><p>{chowder.description}</p></Link>
+                <Link to={`/chowders/${chowder._id}`}><p>{chowder.origin}</p></Link>
             </div>
         ))
     };
@@ -74,52 +108,27 @@ const handleSort = (event) => {
     const loading = () => {
         return <h1>Loading; just a sec!</h1>
     };
+
 return (
     <section>
-         <form onSubmit={handleSubmit}>
-            <input
-            type="text"
-            value={newForm.name}
-            name="name"
-            placeholder="name"
-            onChange={handleChange}
-            required
-            />
-            <input
-            type="text"
-            value={newForm.image}
-            name="image"
-            placeholder="image URL"
-            onChange={handleChange}
-            />
-            <input
-            type="text"
-            value={newForm.description}
-            name="description"
-            placeholder="Describe this tasty chowder"
-            onChange={handleChange}
-            required
-            />
-        <input type="submit" value="Create Your Chowder" />
-        </form> 
-
+         
 
         <div className="searchbar">
 
-<<<<<<< HEAD
-            <input type="text" ref={inputRef} />
-            <button onClick={handleClick}>Search</button>
-        </div> 
-=======
             <input type="text" ref={inputRef} className="searchterm" placeholder="Search for a soup"/>
             <button onClick={handleClick} className="searchbutton">
                 <i class="fa fa-search"></i>
             </button>
->>>>>>> 5f787f3b588c304309d83929dea3f2f6a8bf1684
 
-            <button onClick={handleSort} className="searchbutton" id="sort">
+
+            <select onClick={handleSort} className="searchbutton" id="sort">
                 <i class="fa fa-sort"></i>
-            </button>
+            <option value="name">Sort by Chowder</option>
+            <option value="origin">Sort by Country</option>
+            </select>
+            {/* <button onClick={handleSort} className="searchbutton" id="sort">
+                <i class="fa fa-sort"></i> */}
+            {/* </button> */}
             
         </div>
 
