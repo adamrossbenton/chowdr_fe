@@ -58,7 +58,7 @@ function New(props) {
                 <input
                 type="text"
                 value={newForm.origin}
-                name="description"
+                name="origin"
                 placeholder="Country of Origin"
                 onChange={handleChange}
                 required
