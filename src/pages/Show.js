@@ -53,7 +53,7 @@ const removeChowder = () => {
              <input
             type="text"
             value={editForm.origin}
-            name="Country of Origin"
+            name="origin"
             placeholder="Country of Origin"
             onChange={handleChange}
             />

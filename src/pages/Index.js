@@ -47,14 +47,9 @@ const handleClick = (event) => {
 // https://dev.to/ramonak/react-how-to-dynamically-sort-an-array-of-objects-using-the-dropdown-with-react-hooks-195p
 
 
-
-// 
-    
-    
-
-
-    const handleSort = (event) => {
-        const sortArray = type => {
+        const handleSort = (event) => {
+        const type = event.target.value
+            // const sortArray = type => {
         const types = {
             name: "name",
             origin: "origin",
@@ -62,15 +57,15 @@ const handleClick = (event) => {
         const sortProperty = types[type];
         const newInfo = [...info];
             newInfo.sort ((a, b) => {
-                 if ( a.sortProperty > b.sortProperty) { return 1} else {return -1}
+                 if ( a[sortProperty] > b[sortProperty]) { return 1} else {return -1}
                     })
             console.log(newInfo);
             setInfo(newInfo)
         }
-    }
+    // }
 
 
-
+// Name-only sort
 // const handleSort = (event) => {
 //     const newInfo = [...info];
 //     newInfo.sort ((a, b) => {
@@ -121,7 +116,7 @@ return (
             </button>
 
 
-            <select onClick={handleSort} className="searchbutton" id="sort">
+            <select onChange={handleSort} className="searchbutton" id="sort">
                 <i class="fa fa-sort"></i>
             <option value="name">Sort by Chowder</option>
             <option value="origin">Sort by Country</option>
