@@ -62,9 +62,9 @@ const Login = ({setToken}) => {
     //     }
     // }
     
-    return <>
+    return <div className="loginChowder">
         <h1>Enter username and password to log in</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="loginForm">
             <label>
                 <p>Username: </p>
                 <input 
@@ -84,11 +84,11 @@ const Login = ({setToken}) => {
                     />
             </label>
             <button type="submit">Login</button>
+            <Link to="/user/signup"><button>Signup</button></Link>
+            <Link to="/"><button>Cancel</button></Link>
         </form>
         {noUser()}
-        <Link to="/user/signup"><button>Signup</button></Link>
-        <Link to="/"><button>Cancel</button></Link>
-    </>
+    </div>
 }
 
 Login.propTypes = {
