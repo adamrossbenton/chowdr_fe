@@ -1,16 +1,23 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 
 function New(props) {
+
+    const token = props.token
 
         // State to hold formData
     const [newForm, setNewForm] = useState({
         name: "",
         image: "",
+        origin: "",
         description: "",
         origin: "",
+        creator: props.token,
     })
+
+    // useHistory to redirect if user logs out while on page
+    const history = useHistory()
 
     // handleChange function for form
     const handleChange = (event) => {
@@ -20,15 +27,21 @@ function New(props) {
     // handleSubmit function for form
     const handleSubmit = (event) => {
         event.preventDefault()
-        props.createChowders(newForm)
+        props.createChowders(newForm, )
         setNewForm({
             name: "",
             image: "",
+            origin: "",
             description: "",
             origin: "",
+            creator: props.token,
         })
         props.history.push("/")
     };
+
+    if (!token) {
+        history.push("/user/login")
+    }
 
     return <div className="newChowder">
             <form onSubmit={handleSubmit} className="newForm">
@@ -49,6 +62,13 @@ function New(props) {
                 />
                 <input
                 type="text"
+                value={newForm.origin}
+                name="origin"
+                placeholder="Country of Origin"
+                onChange={handleChange}
+                />
+                <input
+                type="text"
                 value={newForm.description}
                 name="description"
                 placeholder="Describe this tasty chowder"
@@ -62,6 +82,14 @@ function New(props) {
                 placeholder="Country of Origin"
                 onChange={handleChange}
                 required
+                />
+                <input
+                type="text"
+                value={newForm.creator}
+                name="creator"
+                placeholder="Created By:"
+                onChange={handleChange}
+                style={{display: "none"}}
                 />
         <input type="submit" value="Create Your Chowder" id="newCButton"/>
         </form>

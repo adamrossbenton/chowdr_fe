@@ -35,8 +35,9 @@ const Signup = props => {
     }
     
     return <>
-        <section>
-            <form onSubmit={handleSubmit}>
+        <section className="signupChowder">
+            <h1>Sign up to add and keep track of your own chowders</h1>
+            <form onSubmit={handleSubmit} className="signupForm">
                 <input
                     type="text"
                     name="username"
@@ -50,9 +51,9 @@ const Signup = props => {
                     onChange={handleChange}
                 />
                 <input type="submit" value="Sign up"/>
+                <Link to="/user/login"><button>Cancel</button></Link>
             </form>
         </section>
-        <Link to="/login"><button>Cancel</button></Link>
     </>
 }
 
