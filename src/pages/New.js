@@ -12,6 +12,7 @@ function New(props) {
         image: "",
         origin: "",
         description: "",
+        origin: "",
         creator: props.token,
     })
 
@@ -32,6 +33,7 @@ function New(props) {
             image: "",
             origin: "",
             description: "",
+            origin: "",
             creator: props.token,
         })
         props.history.push("/")
@@ -70,6 +72,14 @@ function New(props) {
                 value={newForm.description}
                 name="description"
                 placeholder="Describe this tasty chowder"
+                onChange={handleChange}
+                required
+                />
+                <input
+                type="text"
+                value={newForm.origin}
+                name="origin"
+                placeholder="Country of Origin"
                 onChange={handleChange}
                 required
                 />
