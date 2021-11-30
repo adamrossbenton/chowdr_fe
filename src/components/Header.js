@@ -21,10 +21,6 @@ function Header(props){
                     <div>Home</div>
                 </Link>
 
-                <Link to="/">
-                    <div>Recommendations</div>
-                </Link>
-
                 <Link to="/about">
                     <div>About</div>
                 </Link>
