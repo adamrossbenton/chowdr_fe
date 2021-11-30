@@ -25,7 +25,7 @@ function Header(props){
                     <div>Recommendations</div>
                 </Link>
 
-                <Link to="/">
+                <Link to="/about">
                     <div>About</div>
                 </Link>
 

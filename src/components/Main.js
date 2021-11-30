@@ -6,6 +6,7 @@ import New from "../pages/New"
 import Edit from "../pages/Edit";
 import Login from "./Login"
 import Signup from "./Signup"
+import About from "../pages/About";
 
 
 function Main(props){
@@ -85,6 +86,10 @@ const deleteChowders = async id => {
                 render={(rp) => (
                     <New createChowders={createChowders} token={props.token} {...rp}/>
                 )}/>
+
+                <Route path="/about">
+                    <About />
+                </Route>
 
 
                 <Route path="/user/login">
