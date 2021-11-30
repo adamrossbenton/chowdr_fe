@@ -75,6 +75,7 @@ function New(props) {
                 name="description"
                 placeholder="Edit the description of this tasty chowder"
                 onChange={handleChange}
+                required
                 />
                 <input
                 type="text"

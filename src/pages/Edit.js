@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 function Edit(props) {
+    
+    const token = props.token
 
     const id = props.match.params.id
     const chowders = props.chowders
@@ -21,6 +23,12 @@ function Edit(props) {
         props.updateChowders(editForm, chowder._id)
         // redirect back to index
         props.history.push("/")
+    }
+
+    const history = useHistory()
+
+    if (!token) {
+        history.push("/user/login")
     }
 
     return <div className="newChowder">
