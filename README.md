@@ -3,6 +3,7 @@
 ### Chowder model has full CRUD
 ### Includes Authorization; sign up / log in functionality with encrypted passwords and authorization flow
 
+#### Notion tracker: https://www.notion.so/AAS-Chowder-app-aac2f03553dc47b9918557b0d2015091
 #### Frontend is deployed in Netlify: https://serene-hopper-aee9f0.netlify.app/
 #### Backend is deployed in Heroku: https://chowdr-app.herokuapp.com/
 
