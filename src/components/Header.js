@@ -47,10 +47,6 @@ function Header(props){
                 </Link>
 
                 <Link to="/">
-                    <div>Recommendations</div>
-                </Link>
-
-                <Link to="/">
                     <div>About</div>
                 </Link>
 
