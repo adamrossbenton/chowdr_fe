@@ -15,9 +15,15 @@
 #### Technologies: React, Javascript, MongoDB/Mongoose, Express, Node.js, scss, Git, Notion
 #
 
+## Images
+![w1](https://user-images.githubusercontent.com/73757024/144137460-7e4b2ac4-b89d-4439-af8a-e58a97380d0a.PNG)
+![w2](https://user-images.githubusercontent.com/73757024/144137469-7a612e1f-c8c3-4fa6-8012-9a68c4cf4245.PNG)
+![1](https://user-images.githubusercontent.com/73757024/144137335-429fdd33-1dcc-47d3-bb5c-ee5f7db56728.png)
+##
+
 #### Challenges
 ##### Anthea: Implementing search and sort
-##### Stephen:
+##### Stephen: GitHub workflow, styling to meet expectations
 ##### Adam: Setting up token authentication, using custom useToken hook, using token property to render user-specific information
 
 #### Roles
