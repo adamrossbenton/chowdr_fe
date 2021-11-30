@@ -18,7 +18,7 @@
 #### Challenges
 ##### Anthea: Implementing search and sort
 ##### Stephen:
-##### Adam: 
+##### Adam: Setting up token authentication, using custom useToken hook, using token property to render user-specific information
 
 #### Roles
 ##### Release manager (responsible for handling branches, keeping mastersafe, and resolving merge conflicts if the developers cannot resolve them): Adam Benton
