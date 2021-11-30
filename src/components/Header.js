@@ -14,9 +14,6 @@ function Header(props){
                 <Link to="/">
                     <div>chowdr</div>
                 </Link>
-                <Link to="/login">
-                    <button>login</button>
-                </Link>
             </nav>
 
             <nav className="subNav">
@@ -24,12 +21,12 @@ function Header(props){
                     <div>Home</div>
                 </Link>
 
-                <Link to="/">
-                    <div>Recommendations</div>
+                <Link to="/about">
+                    <div>About</div>
                 </Link>
 
-                <Link to="/">
-                    <div>About</div>
+                <Link to="/user/login">
+                    <div>Login</div>
                 </Link>
             </nav>
         </>
@@ -42,9 +39,6 @@ function Header(props){
                 <Link to="/">
                     <div>chowdr</div>
                 </Link>
-                <form onSubmit={logout}>
-                    <button>Logout</button>
-                </form>
             </nav>
 
             <nav className="subNav">
@@ -53,12 +47,12 @@ function Header(props){
                 </Link>
 
                 <Link to="/">
-                    <div>Recommendations</div>
-                </Link>
-
-                <Link to="/">
                     <div>About</div>
                 </Link>
+
+                <form onSubmit={logout}>
+                    <button id="logout">Logout</button>
+                </form>
             </nav>
         </>
     }
