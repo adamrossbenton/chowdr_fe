@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show"
 import New from "../pages/New"
+import Edit from "../pages/Edit";
 import Login from "./Login"
 import Signup from "./Signup"
 
@@ -63,6 +64,11 @@ const deleteChowders = async id => {
                     <Index chowders={chowders} createChowders={createChowders} token={props.token} />
                 </Route>
 
+                <Route path="/chowders/:id/edit"
+                render={(rp) => (
+                    <Edit chowders={chowders} updateChowders={updateChowders} token={props.token} {...rp}/>
+                )}/>
+
                 <Route 
                 path="/chowders/:id"
                 render={(rp) => (
@@ -79,6 +85,7 @@ const deleteChowders = async id => {
                 render={(rp) => (
                     <New createChowders={createChowders} token={props.token} {...rp}/>
                 )}/>
+
 
                 <Route path="/user/login">
                     <Login setToken={props.setToken}/>

@@ -68,11 +68,12 @@ function New(props) {
                 onChange={handleChange}
                 required
                 />
-                <input
-                type="text"
+                <textarea 
+                cols="53"
+                rows="10"
                 value={newForm.description}
                 name="description"
-                placeholder="Describe this tasty chowder"
+                placeholder="Edit the description of this tasty chowder"
                 onChange={handleChange}
                 required
                 />
