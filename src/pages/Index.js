@@ -121,9 +121,6 @@ return (
             <option value="name">Sort by Chowder</option>
             <option value="origin">Sort by Country</option>
             </select>
-            {/* <button onClick={handleSort} className="searchbutton" id="sort">
-                <i class="fa fa-sort"></i> */}
-            {/* </button> */}
             
         </div>
 
