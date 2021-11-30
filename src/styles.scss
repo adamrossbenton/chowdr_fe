@@ -21,6 +21,13 @@ body {
   color: #D7C8B4;
 }
 
+
+// flexbox line break
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
 // --------------------------
 // Header
 // --------------------------
@@ -137,20 +144,6 @@ textarea:focus, input:focus{
   outline: none;
 }
 
-
-// button#delete {
-//   display: block;
-//   margin: auto;
-//   font-size: 1.0em;
-//   padding: 10px;
-//   border-radius: 5px;
-//   background-color: red;
-//   &:hover{
-//     border: solid darkblue 5px;
-//     padding: 5px;
-//     transition: 0.2s;
-//   }
-// }
 
 //--------------------------
 // Chowder Index
@@ -314,8 +307,11 @@ span {
   color: white;
 
   img {
-    max-width: 40vw;
-    max-height: 50vw;
+    display: block;
+    max-height: 50vh;
+    max-width: 50vw;
+    width: auto;
+    height: auto;
     border-radius: 30px;
     transition: transform 0.3s;
     &:hover {
@@ -323,17 +319,26 @@ span {
     }
   }
 
+  p {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
 }
 
 .desc {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   padding: 0vw 5vw 0vw 5vw;
 
   h3 {
     font-size: 4vw;
   }
-cd
+
   p {
     font-size: 1vw;
   }
@@ -342,7 +347,41 @@ cd
 
 /// SHOW PAGE BUTTONS
 .botButtons {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#delete {
+  border: none;
+  background-color: rgba(255, 0, 0, 0.425);
+  transition-duration: 0.3s;
+  padding: 1.1em;
+  border-radius: 10px;
+  font-family: 'Raleway';
+  font-weight: bolder;
+}
+
+#delete:hover {
+  background-color: rgb(185, 0, 0);
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+#edit {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.425);
+  transition-duration: 0.3s;
+  padding: 1.3em;
+  border-radius: 10px;
+  font-family: 'Raleway';
+  font-weight: bolder;
+}
+
+#edit:hover {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  transform: scale(1.15);
 }
 
 // --------------------------

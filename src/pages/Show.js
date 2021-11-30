@@ -20,7 +20,6 @@ function Show(props){
             <h2>{chowder.origin}</h2>
             <p>{chowder.description}</p>
         </div>
-        
         <div className="botButtons">
                 <Link to={`/chowders/${chowder._id}/edit`}>
                     <button id="edit">EDIT</button>
