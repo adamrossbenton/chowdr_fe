@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# The Chowdr App
+### The Chowdr App is a full-stack application using the MERN stack: Mongoose, Express, React, Node.js
+### Chowder model has full CRUD
+### Includes Authorization; sign up / log in functionality with encrypted passwords and authorization flow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Frontend is deployed in Netlify: https://serene-hopper-aee9f0.netlify.app/
+#### Backend is deployed in Heroku: https://chowdr-app.herokuapp.com/
+
+
+#### There are two separate Git repositories for Frontend and Backend
+#### Tracking and project plan in Notion
+
 
 ## Available Scripts
 
