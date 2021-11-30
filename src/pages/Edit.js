@@ -71,7 +71,7 @@ function Edit(props) {
             onChange={handleChange}
             />
 
-        <input type="submit" value="Update Your Chowder" />
+        <input type="submit" value="Update Chowder" id="newCButton"/>
         </form>
     </div>
 }
