@@ -14,7 +14,8 @@ function Show(props){
     return (
     <div className="showChowder">
 
-        <img src={chowder.image} alt={chowder.name} />
+        <a href={chowder.image} target="_blank"><img src={chowder.image} alt={chowder.name} /></a>
+        
         <div className="desc">
             <h3>{chowder.name}</h3>
             <h2>{chowder.origin}</h2>
