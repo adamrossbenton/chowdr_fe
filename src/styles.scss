@@ -499,3 +499,23 @@ span {
   border-top: 5px solid rgb(92, 86, 86);
   color: rgb(196, 196, 196);
 }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.550);
+  color: white;
+  margin-top: 10vh;
+  width: 70%;
+  height: 100vh;
+  border-radius: 10px;
+
+  h1 {
+    padding: 0 5vw 5vw 5vw;
+  }
+
+  a {
+    text-decoration: revert;
+  }
+}

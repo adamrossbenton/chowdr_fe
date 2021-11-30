@@ -21,11 +21,7 @@ function Header(props){
                     <div>Home</div>
                 </Link>
 
-                <Link to="/">
-                    <div>Recommendations</div>
-                </Link>
-
-                <Link to="/">
+                <Link to="/about">
                     <div>About</div>
                 </Link>
 
@@ -48,10 +44,6 @@ function Header(props){
             <nav className="subNav">
                 <Link to="/">
                     <div>Home</div>
-                </Link>
-
-                <Link to="/">
-                    <div>Recommendations</div>
                 </Link>
 
                 <Link to="/">
