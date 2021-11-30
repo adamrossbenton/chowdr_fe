@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# The Chowdr App
+#
+### The Chowdr App is a full-stack application using the MERN stack: Mongoose, Express, React, Node.js
+### Chowder model has full CRUD
+### Includes Authorization; sign up / log in functionality with encrypted passwords and authorization flow
+#
+#### Notion tracker: https://www.notion.so/AAS-Chowder-app-aac2f03553dc47b9918557b0d2015091
+#### Frontend is deployed in Netlify: https://serene-hopper-aee9f0.netlify.app/
+#### Backend is deployed in Heroku: https://chowdr-app.herokuapp.com/
+#
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### There are two separate Git repositories for Frontend and Backend
+#### User stories https://www.notion.so/d7eda6f32b0a4d5792087861420f86a3?v=8e171da8795d437fbaf8d6bff397480b
+#### Board view: https://www.notion.so/af27c05b5beb4f90a03d7885cd3f7b7d?v=2fef6ed1bc3c469b8e9c9a01ed91dfd4
+#### Technologies: React, Javascript, MongoDB/Mongoose, Express, Node.js, scss, Git, Notion
+#
 
-## Available Scripts
+## Images
+![w1](https://user-images.githubusercontent.com/73757024/144137460-7e4b2ac4-b89d-4439-af8a-e58a97380d0a.PNG)
+![w2](https://user-images.githubusercontent.com/73757024/144137469-7a612e1f-c8c3-4fa6-8012-9a68c4cf4245.PNG)
+![1](https://user-images.githubusercontent.com/73757024/144137335-429fdd33-1dcc-47d3-bb5c-ee5f7db56728.png)
+##
 
-In the project directory, you can run:
+#### Challenges
+##### Anthea: Implementing search and sort
+##### Stephen: GitHub workflow, styling to meet expectations
+##### Adam: Setting up token authentication, using custom useToken hook, using token property to render user-specific information
 
-### `npm start`
+#### Roles
+##### Release manager (responsible for handling branches, keeping mastersafe, and resolving merge conflicts if the developers cannot resolve them): Adam Benton
+##### Product manager (responsible for prioritizing tasks so that the user gets the most out of the app -- this will usually be the originator of the project idea): Anthea Ip
+##### Lead front-end dev (responsible for breaking ties when the group has disagreements on front-end coding, and for designing a general plan for front-end development, e.g. file structure and statemanagement): Stephen Hong
+##### Lead back-end dev (responsible for breaking ties when the group has disagreements on back-end coding, and for designing a general plan for back-end development, e.g. file structure and schema definitions): Adam
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
