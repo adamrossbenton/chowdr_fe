@@ -27,7 +27,7 @@ function New(props) {
     // handleSubmit function for form
     const handleSubmit = (event) => {
         event.preventDefault()
-        props.createChowders(newForm, )
+        props.createChowders(newForm)
         setNewForm({
             name: "",
             image: "",
@@ -66,20 +66,13 @@ function New(props) {
                 name="origin"
                 placeholder="Country of Origin"
                 onChange={handleChange}
+                required
                 />
                 <input
                 type="text"
                 value={newForm.description}
                 name="description"
                 placeholder="Describe this tasty chowder"
-                onChange={handleChange}
-                required
-                />
-                <input
-                type="text"
-                value={newForm.origin}
-                name="origin"
-                placeholder="Country of Origin"
                 onChange={handleChange}
                 required
                 />
