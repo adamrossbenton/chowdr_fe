@@ -10,10 +10,14 @@
 #
 
 #### There are two separate Git repositories for Frontend and Backend
-#### Tracking and project plan in Notion
+#### User stories https://www.notion.so/d7eda6f32b0a4d5792087861420f86a3?v=8e171da8795d437fbaf8d6bff397480b
 #### Board view: https://www.notion.so/af27c05b5beb4f90a03d7885cd3f7b7d?v=2fef6ed1bc3c469b8e9c9a01ed91dfd4
 #### Technologies: React, Javascript, MongoDB/Mongoose, Express, Node.js, scss, Git, Notion
 #
+
+#### Challenges
+##### Anthea: Implementing search and sort
+##### Stephen:
 
 #### Roles
 ##### Release manager (responsible for handling branches, keeping mastersafe, and resolving merge conflicts if the developers cannot resolve them): Adam Benton
