@@ -18,6 +18,7 @@
 #### Challenges
 ##### Anthea: Implementing search and sort
 ##### Stephen:
+##### Adam: 
 
 #### Roles
 ##### Release manager (responsible for handling branches, keeping mastersafe, and resolving merge conflicts if the developers cannot resolve them): Adam Benton
