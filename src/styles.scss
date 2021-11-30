@@ -361,6 +361,24 @@ cd
   padding: 5vw 0 5vw 0;
   width: 30vw;
   border-radius: 5px;
+  
+  p {
+    color: white;
+    margin: -5px;
+  }
+
+  textarea {
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.550);
+    color: rgb(255, 187, 0);
+    font-family: inherit;
+  }
+
+  h1 {
+    margin-top: -5vh;
+    margin-bottom: 5vh;
+    color: white;
+  }
 }
 
 #newCButton {

@@ -23,8 +23,10 @@ function Edit(props) {
         props.history.push("/")
     }
 
-    return <div className="formChowder">
-        <form onSubmit={handleSubmit}>
+    return <div className="newChowder">
+        <form onSubmit={handleSubmit} className="newForm">
+        <h1> Editing: {chowder.name} </h1>
+        <p>Name </p>
         <input
             type="text"
             value={editForm.name}
@@ -32,6 +34,8 @@ function Edit(props) {
             placeholder="name"
             onChange={handleChange}
             />
+
+        <p>Image URL </p>
             <input
             type="text"
             value={editForm.image}
@@ -39,13 +43,8 @@ function Edit(props) {
             placeholder="image URL"
             onChange={handleChange}
             />
-            <input
-            type="text"
-            value={editForm.description}
-            name="description"
-            placeholder="Edit the description of this tasty chowder"
-            onChange={handleChange}
-            />
+
+        <p>Country of Origin </p>
             <input
             type="text"
             value={editForm.origin}
@@ -53,6 +52,17 @@ function Edit(props) {
             placeholder="Country of Origin"
             onChange={handleChange}
             />
+
+        <p>Description </p>
+            <textarea 
+            cols="53"
+            rows="10"
+            value={editForm.description}
+            name="description"
+            placeholder="Edit the description of this tasty chowder"
+            onChange={handleChange}
+            />
+
         <input type="submit" value="Update Your Chowder" />
         </form>
     </div>
